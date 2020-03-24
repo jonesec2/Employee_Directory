@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import EmployeeComponent from "./components/EmployeeComponent";
+import Wrapper from "./components/Wrapper";
+import Title from "./components/Title";
 import employees from "./employees.json";
 
 class App extends Component {
@@ -11,7 +13,8 @@ class App extends Component {
 
    render() {
       return (
-         <>
+         <Wrapper>
+            <Title>Employee Directory</Title>
             <table className="table table-striped">
                <thead>
                   <tr>
@@ -37,7 +40,7 @@ class App extends Component {
                   ))}
                </tbody>
             </table>
-         </>
+         </Wrapper>
       )
    }
 }
