@@ -1,6 +1,6 @@
 import React from "react";
 
-function HelloDiv(props) {
+function EmployeeComponent(props) {
   return (
     <div className="card">
       <h1>Employee: {props.id}</h1>
@@ -15,4 +15,4 @@ function HelloDiv(props) {
   );
 }
 
-export default HelloDiv;
+export default EmployeeComponent;

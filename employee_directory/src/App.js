@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import HelloDiv from "./components/HelloDiv";
+import EmployeeComponent from "./components/EmployeeComponent";
 import employees from "./employees.json";
 
 class App extends Component {
@@ -11,7 +11,7 @@ class App extends Component {
 
    render() {
       return (
-         <HelloDiv
+         <EmployeeComponent
             id={employees[0].id}
             firstName={employees[0].firstName}
             lastName={employees[0].lastName}
