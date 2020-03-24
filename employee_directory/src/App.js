@@ -4,12 +4,18 @@ import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import employees from "./employees.json";
 
+
 class App extends Component {
 
    state = {
       employees
    };
 
+   // use conditional rendering to render a table based on the user's input
+   // see activity 20/21
+
+   // render forms for user to input desired input for table
+   // see activity 17/18
 
    render() {
       return (
