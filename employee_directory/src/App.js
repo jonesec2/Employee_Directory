@@ -11,16 +11,19 @@ class App extends Component {
 
    render() {
       return (
-         <EmployeeComponent
-            id={employees[0].id}
-            firstName={employees[0].firstName}
-            lastName={employees[0].lastName}
-            position={employees[0].position}
-            contractor={employees[0].contractor}
-            management={employees[0].management}
-         />
+         this.state.employees.map(employee => (
+            <EmployeeComponent
+               id={employee.id}
+               firstName={employee.firstName}
+               lastName={employee.lastName}
+               position={employee.position}
+               contractor={employee.contractor}
+               management={employee.management}
+            />
+         ))
       )
    }
 }
+
 
 export default App;
