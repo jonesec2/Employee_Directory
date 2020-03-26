@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import EmployeeComponent from "../components/EmployeeComponent.js";
+import EmployeeComponent from "./EmployeeComponent.js";
 import employees from "../employees.json";
 
 

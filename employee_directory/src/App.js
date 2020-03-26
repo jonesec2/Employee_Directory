@@ -2,8 +2,9 @@ import React  from "react";
 // import EmployeeComponent from "./components/EmployeeComponent";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import Table from "./pages/Table"
+import Table from "./pages/Table";
 // import employees from "./employees.json";
+import InputForms from "./pages/InputForms";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
    return (
       <Wrapper>
          <Title>Employee Directory</Title>
+         <InputForms></InputForms>
          <Table></Table>
       </Wrapper>
    )
