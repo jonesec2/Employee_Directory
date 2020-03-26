@@ -7,10 +7,46 @@ class Table extends Component {
 
    state = {
       employees
+      ,
+      manageFilter: "Yes"
    };
 
+   handlePageChange = () => {
+      if (this.state.manageFilter === "") {
+         return this.state.employees.map(employee => (
+            <EmployeeComponent
+               id={employee.id}
+               firstName={employee.firstName}
+               lastName={employee.lastName}
+               position={employee.position}
+               contractor={employee.contractor}
+               management={employee.management}
+            />
+         ))
+      } else if (this.state.manageFilter === "Yes") {
+         return this.state.employees.map(employee => (
+            <EmployeeComponent
+               id={employee.id}
+               firstName={employee.firstName}
+               lastName={employee.lastName}
+               position={employee.position}
+               contractor={employee.contractor}
+               management={employee.management}
+            />
+         ))
+      }
+   }
+   // handleFilter = option => {
+   //    if (this.state.manageFilter === "Yes") {
+   //       return this.state.employees.filter(employee => (
+   //          employee.management === 1
+   //       ))
+   //    }
+   // }
+
+
    render() {
-      return (
+      return [
          <table className="table table-striped">
             <thead>
                <tr>
@@ -23,20 +59,10 @@ class Table extends Component {
                </tr>
             </thead>
             <tbody>
-               {this.state.employees.map(employee => (
-                  <EmployeeComponent
-
-                     id={employee.id}
-                     firstName={employee.firstName}
-                     lastName={employee.lastName}
-                     position={employee.position}
-                     contractor={employee.contractor}
-                     management={employee.management}
-                  />
-               ))}
+               {this.handlePageChange()}
             </tbody>
          </table>
-      )
+      ]
    }
 }
 

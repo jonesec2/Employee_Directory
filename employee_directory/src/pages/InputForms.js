@@ -3,20 +3,17 @@ import React from "react";
 function InputForms() {
 
    return (
-      <form>
-         <div className="form-group">
-            <label for="exampleFormControlInput1">Email address</label>
-            <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
-         </div>
-         <div className="form-group">
-            <label for="exampleFormControlSelect1">Example select</label>
-            <select className="form-control" id="exampleFormControlSelect1">
-               <option>1</option>
-               <option>2</option>
-               <option>3</option>
-               <option>4</option>
-               <option>5</option>
-            </select>
+      <form className="mx-auto">
+         <div className="form-group row">
+            <label className="col-sm-6 col-form-label" htmlFor="exampleFormControlSelect1">Management</label>
+            <div className="col-sm-6">
+               <select className="form-control" id="exampleFormControlSelect1" placeholder="-- Select --">
+                  <option key={"Select"} defaultValue=" Select " selected disabled> Select </option>
+                  <option key={"Yes"}>Yes</option>
+                  <option key={"No"}>No</option>
+                  <option key={"N/A"}>N/A</option>
+               </select>
+            </div>
          </div>
       </form>
    );

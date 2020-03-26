@@ -14,5 +14,21 @@
       "position": "Tester",
       "contractor": 0,
       "management": 1
+   },
+   {
+      "id": 3,
+      "firstName": "Corbin",
+      "lastName": "Dallas",
+      "position": "Technician",
+      "contractor": 1,
+      "management": 0
+   },
+   {
+      "id": 4,
+      "firstName": "Boin",
+      "lastName": "Kim",
+      "position": "Tester",
+      "contractor": 0,
+      "management": 1
    }
 ]
