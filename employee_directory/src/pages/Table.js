@@ -2,18 +2,19 @@ import React, { Component } from "react";
 import EmployeeComponent from "./EmployeeComponent.js";
 import employees from "../employees.json";
 
+// change to function
+function Table(props) {
 
-class Table extends Component {
+   // state = {
+   //    employees
+   //    ,
+   //    manageFilter: ""
+   // };
 
-   state = {
-      employees
-      ,
-      manageFilter: "Yes"
-   };
 
-   handlePageChange = () => {
-      if (this.state.manageFilter === "") {
-         return this.state.employees.map(employee => (
+   handlePageChange = (props) => {
+      if (prop.manageFilter === "") {
+         return props.employees.map(employee => (
             <EmployeeComponent
                id={employee.id}
                firstName={employee.firstName}
@@ -24,7 +25,7 @@ class Table extends Component {
             />
          ))
       } else if (this.state.manageFilter === "Yes") {
-         return this.state.employees.map(employee => (
+         return this.state.employees.filter(employee => employee.management === 1).map(employee =>
             <EmployeeComponent
                id={employee.id}
                firstName={employee.firstName}
@@ -33,7 +34,7 @@ class Table extends Component {
                contractor={employee.contractor}
                management={employee.management}
             />
-         ))
+         )
       }
    }
    // handleFilter = option => {
@@ -45,7 +46,7 @@ class Table extends Component {
    // }
 
 
-   render() {
+   {
       return [
          <table className="table table-striped">
             <thead>
@@ -59,7 +60,7 @@ class Table extends Component {
                </tr>
             </thead>
             <tbody>
-               {this.handlePageChange()}
+               {handlePageChange()}
             </tbody>
          </table>
       ]

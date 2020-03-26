@@ -1,6 +1,6 @@
 import React from "react";
 
-function InputForms() {
+function InputForms(props) {
 
    return (
       <form className="mx-auto">
