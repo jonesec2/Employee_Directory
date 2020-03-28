@@ -1,13 +1,8 @@
 import React from "react";
-// import EmployeeComponent from "./EmployeeComponent.js";
-// import employees from "../employees.json";
+
 
 // change to function
 function Table(props) {
-
-   console.log(props.employees)
-   console.log(props.value)
-
    return [
       <table className="table table-striped">
          <thead>
@@ -22,10 +17,10 @@ function Table(props) {
          </thead>
          <tbody>
             {props.handlePageChange}
+            {/* {props.handleFirstChange} */}
          </tbody>
       </table>
    ]
-
 }
 
 export default Table;

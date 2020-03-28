@@ -11,7 +11,7 @@ class App extends Component {
 
    constructor(props) {
       super(props);
-      this.state = { employees, value: "" };
+      this.state = { employees, manageValue: "Select", firstValue: "Select" };
 
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,16 +19,16 @@ class App extends Component {
 
 
    handleSubmit(event) {
-      alert('Your favorite flavor is: ' + this.state.value);
       event.preventDefault();
    }
    handleChange(event) {
-      this.setState({ value: event.target.value });
+      this.setState({ manageValue: event.target.value });
+      this.setState({ firstValue: event.target.value});
    }
 
 
    handlePageChange() {
-      if (this.state.value === "No") {
+      if (this.state.manageValue === "No") {
          return this.state.employees.filter(employee => employee.management === 0).map(employee =>
             <EmployeeComponent
                id={employee.id}
@@ -39,7 +39,7 @@ class App extends Component {
                management={employee.management}
             />
          )
-      } else if (this.state.value === "Yes") {
+      } else if (this.state.manageValue === "Yes") {
          return this.state.employees.filter(employee => employee.management === 1).map(employee =>
             <EmployeeComponent
                id={employee.id}
@@ -50,7 +50,20 @@ class App extends Component {
                management={employee.management}
             />
          )
-      } else {
+      } 
+      // else if (this.state.firstValue === "A-I") {
+      //    return this.state.employees.filter(employee => employee.firstName ).map(employee =>
+      //       <EmployeeComponent
+      //          id={employee.id}
+      //          firstName={employee.firstName}
+      //          lastName={employee.lastName}
+      //          position={employee.position}
+      //          contractor={employee.contractor}
+      //          management={employee.management}
+      //       />
+      //    )
+      // }
+       else {
          return this.state.employees.map(employee =>
             <EmployeeComponent
                id={employee.id}
@@ -64,48 +77,18 @@ class App extends Component {
       }
    }
 
-   // use conditional rendering to render a table based on the user's input
-   // see activity 20/21
-
-   // add function that will update manageFilter to pass props to InputForms
-   // use onChange keyword
-   // onChange = () => {
-   //    manageFilter: "Yes"
-   // }
-
-   // render forms for user to input desired input for table
-   // see activity 17/18
-
    render() {
       return (
          <Wrapper>
             <Title>Employee Directory</Title>
-            {/* <form onSubmit={this.handleSubmit}>
-               <label>
-                  Pick your favorite flavor:
-                  <select value={this.state.value} onChange={this.handleChange}>
-                     <option value="grapefruit">Grapefruit</option>
-                     <option value="lime">Lime</option>
-                     <option value="coconut">Coconut</option>
-                     <option value="mango">Mango</option>
-                  </select>
-               </label>
-               <input type="submit" value="Submit" />
-            </form> */}
             <InputForms
-            // onChange={this.onChange}
-            value = {this.state.value}
+            manageValue = {this.state.manageValue}
             handleSubmit = {this.handleSubmit}
             handleChange = {this.handleChange}
-            >
-
-            </InputForms>
+            ></InputForms>
             <Table
-               employees={this.state.employees}
-               value={this.state.manageFilter}
                handlePageChange={this.handlePageChange()}
-            >
-            </Table>
+            ></Table>
          </Wrapper>
       )
    }
