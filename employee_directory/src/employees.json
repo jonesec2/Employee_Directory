@@ -12,16 +12,16 @@
       "firstName": "Brianna",
       "lastName": "Sans",
       "position": "Tester",
-      "contractor": 0,
-      "management": 1
+      "contractor": 1,
+      "management": 0
    },
    {
       "id": 3,
       "firstName": "Corbin",
       "lastName": "Dallas",
       "position": "Technician",
-      "contractor": 1,
-      "management": 0
+      "contractor": 0,
+      "management": 1
    },
    {
       "id": 4,
@@ -30,5 +30,37 @@
       "position": "Tester",
       "contractor": 0,
       "management": 1
+   },
+   {
+      "id": 5,
+      "firstName": "Grog",
+      "lastName": "Strongjaw",
+      "position": "Developer",
+      "contractor": 1,
+      "management": 0
+   },
+   {
+      "id": 6,
+      "firstName": "Genevieve",
+      "lastName": "Lavorre",
+      "position": "Developer",
+      "contractor": 0,
+      "management": 1
+   },
+   {
+      "id": 7,
+      "firstName": "Polly",
+      "lastName": "Darton",
+      "position": "Developer",
+      "contractor": 1,
+      "management": 0
+   },
+   {
+      "id": 8,
+      "firstName": "Francis",
+      "lastName": "Frito",
+      "position": "Tester",
+      "contractor": 1,
+      "management": 0
    }
 ]
