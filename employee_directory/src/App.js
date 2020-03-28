@@ -87,8 +87,29 @@ class App extends Component {
             } else {
                return 0;
             }
+         } else if (column === "contractor") {
+            const numA = a.contractor;
+            const numbB = b.contractor;
+            if (numA < numbB) {
+               return -1;
+            }
+            if (numA > numbB) {
+               return 1;
+            } else {
+               return 0;
+            }
+         } else {
+            const numA = a.management;
+            const numbB = b.management;
+            if (numA < numbB) {
+               return -1;
+            }
+            if (numA > numbB) {
+               return 1;
+            } else {
+               return 0;
+            }
          }
-         return 0;
       });
 
       if (direction === 'desc') {

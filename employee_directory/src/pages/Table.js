@@ -23,11 +23,11 @@ function Table(props) {
                   Position
                   <span className={props.setArrow('position')}></span>
                </th>
-               <th onClick={props.onSortNumber('id')} id="contractor" scope="col">
+               <th onClick={props.onSortNumber('contractor')} id="contractor" scope="col">
                   Contractor
                   <span className={props.setArrow('contractor')}></span>
                </th>
-               <th scope="col">
+               <th onClick={props.onSortNumber('contractor')} id="management" scope="col">
                   Management
                   <span className={props.setArrow('management')}></span>
                </th>
