@@ -1,52 +1,126 @@
-// array = [
-//    {
-//       "id": 1,
-//       "firstName": "John",
-//       "lastName": "Smith",
-//       "position": "Technician",
-//       "contractor": 1,
-//       "management": 0
-//    },
-//    {
-//       "id": 2,
-//       "firstName": "Brianna",
-//       "lastName": "Sans",
-//       "position": "Tester",
-//       "contractor": 0,
-//       "management": 1
-//    },
-//    {
-//       "id": 3,
-//       "firstName": "Corbin",
-//       "lastName": "Dallas",
-//       "position": "Technician",
-//       "contractor": 1,
-//       "management": 0
-//    },
-//    {
-//       "id": 4,
-//       "firstName": "Boin",
-//       "lastName": "Kim",
-//       "position": "Tester",
-//       "contractor": 0,
-//       "management": 1
-//    }
-// ]
+import React from 'react';
+import { MDBCard, MDBCardBody, MDBCardHeader, MDBInput, MDBBtn, MDBTable, MDBTableBody, MDBTableHead  } from 'mdbreact';
 
+const TablePage = (props) => {
+  const data_panel = {
+    columns: [
+      {
+        'label': <MDBInput label=" " type="checkbox" id="checkbox5" />,
+        'field': 'check',
+        'sort': 'asc'
+      },
+      {
+        'label': 'First Name',
+        'field': 'first',
+        'sort': 'asc'
+      },
+      {
+        'label': 'Last Name',
+        'field': 'last',
+        'sort': 'asc'
+      },
+      {
+        'label': 'Username',
+        'field': 'username',
+        'sort': 'asc'
+      },
+      {
+        'label': 'Username',
+        'field': 'username2',
+        'sort': 'asc'
+      },
+      {
+        'label': 'Username',
+        'field': 'username3',
+        'sort': 'asc'
+      },
+      {
+        'label': 'Username',
+        'field': 'username4',
+        'sort': 'asc'
+      }
+    ],
+    rows: [
+      {
+        'check': <MDBInput label=" " type="checkbox" id="checkbox6" />,
+        'first': 'Mark',
+        'last': 'Otto',
+        'username': '@mdo',
+        'username2': 'Mark',
+        'username3': 'Otto',
+        'username4': '@mdo'
+      },
+      {
+        'check': <MDBInput label=" " type="checkbox" id="checkbox7" />,
+        'first': 'Jacob',
+        'last': 'Thornton',
+        'username': '@fat',
+        'username2': 'Jacob',
+        'username3': 'Thornton',
+        'username4': '@fat'
+      },
+      {
+        'check': <MDBInput label=" " type="checkbox" id="checkbox8" />,
+        'first': 'Larry',
+        'last': 'the Bird',
+        'username': '@twitter',
+        'username2': 'Larry',
+        'username3': 'the Bird',
+        'username4': '@twitter'
+      },
+      {
+        'check': <MDBInput label=" " type="checkbox" id="checkbox9" />,
+        'first': 'Paul',
+        'last': 'Topolski',
+        'username': '@P_Topolski',
+        'username2': 'Paul',
+        'username3': 'Topolski',
+        'username4': '@P_Topolski'
+      },
+      {
+        'check': <MDBInput label=" " type="checkbox" id="checkbox10" />,
+        'first': 'Larry',
+        'last': 'the Bird',
+        'username': '@twitter',
+        'username2': 'Larry',
+        'username3': 'the Bird',
+        'username4': '@twitter'
+      }
+    ]
+  };
 
-// console.log(array.map())
+  return(
+    <MDBCard narrow>
+      <MDBCardHeader className="view view-cascade gradient-card-header blue-gradient d-flex justify-content-between align-items-center py-2 mx-4 mb-3">
+        <div>
+          <MDBBtn outline rounded size="sm" color="white" className="px-2">
+            <i className="fa fa-th-large mt-0"></i>
+          </MDBBtn>
+          <MDBBtn outline rounded size="sm" color="white" className="px-2">
+            <i className="fa fa-columns mt-0"></i>
+          </MDBBtn>
+        </div>
+        <a href="#" className="white-text mx-3">Table name</a>
+        <div>
+          <MDBBtn outline rounded size="sm" color="white" className="px-2">
+            <i className="fas fa-pencil-alt mt-0"></i>
+          </MDBBtn>
+          <MDBBtn outline rounded size="sm" color="white" className="px-2">
+            <i className="fas fa-times mt-0"></i>
+          </MDBBtn>
+          <MDBBtn outline rounded size="sm" color="white" className="px-2">
+            <i className="fa fa-info-circle mt-0"></i>
+          </MDBBtn>
+        </div>
+      </MDBCardHeader>
+      <MDBCardBody cascade>
+        <MDBTable btn fixed>
+          <MDBTableHead columns={data_panel.columns} />
+          <MDBTableBody rows={data_panel.rows} />
+        </MDBTable>
+      </MDBCardBody>
+    </MDBCard>
+  );
+};
 
-const mock = [
-   {
-     name: 'Bob',
-     age: 20,
-     include: true,
-   },
-   {
-     name: 'Frank',
-     age: 30,
-     include: false,
-   },
- ];
- const data = mock.filter(guy => guy.include === true).map(guy => guy.name);
- console.log(data);
+export default TablePage;

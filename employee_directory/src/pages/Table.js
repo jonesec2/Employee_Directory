@@ -1,4 +1,5 @@
 import React from "react";
+import DatablePage from "../components/DatablePage";
 
 
 // change to function
@@ -17,6 +18,7 @@ function Table(props) {
          </thead>
          <tbody>
             {props.handleTableValues}
+            {DatablePage()}
          </tbody>
       </table>
    ]

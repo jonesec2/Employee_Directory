@@ -6,6 +6,7 @@ import Table from "./pages/Table";
 import employees from "./employees.json";
 import InputForms from "./pages/InputForms";
 
+
 class App extends Component {
 
    state = {
