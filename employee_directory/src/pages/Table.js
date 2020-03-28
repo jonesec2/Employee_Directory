@@ -1,5 +1,4 @@
 import React from "react";
-import DatablePage from "../components/DatablePage";
 
 
 // change to function
@@ -8,17 +7,34 @@ function Table(props) {
       <table className="table table-striped">
          <thead>
             <tr>
-               <th id="id" scope="col">#</th>
-               <th scope="col">First</th>
-               <th scope="col">Last</th>
-               <th scope="col">Position</th>
-               <th scope="col">Contractor</th>
-               <th scope="col">Management</th>
+               <th onClick={props.onSortNumber('id')} id="id" scope="col">
+                  #
+                  <span className={props.setArrow('id')}></span>
+               </th>
+               <th onClick={props.onSort('firstName')} id="firstName" scope="col">
+                  First
+                  <span className={props.setArrow('firstName')}></span>
+               </th>
+               <th onClick={props.onSort('lastName')} id="lastName" scope="col">
+                  Last
+                  <span className={props.setArrow('lastName')}></span>
+               </th>
+               <th onClick={props.onSort('position')} id="position" scope="col">
+                  Position
+                  <span className={props.setArrow('position')}></span>
+               </th>
+               <th onClick={props.onSortNumber('id')} id="contractor" scope="col">
+                  Contractor
+                  <span className={props.setArrow('contractor')}></span>
+               </th>
+               <th scope="col">
+                  Management
+                  <span className={props.setArrow('management')}></span>
+               </th>
             </tr>
          </thead>
          <tbody>
             {props.handleTableValues}
-            {DatablePage()}
          </tbody>
       </table>
    ]
