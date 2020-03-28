@@ -16,8 +16,7 @@ function Table(props) {
             </tr>
          </thead>
          <tbody>
-            {props.handlePageChange}
-            {/* {props.handleFirstChange} */}
+            {props.handleTableValues}
          </tbody>
       </table>
    ]

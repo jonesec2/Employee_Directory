@@ -8,24 +8,25 @@ import InputForms from "./pages/InputForms";
 
 class App extends Component {
 
-   constructor(props) {
-      super(props);
-      this.state = { employees, manageValue: "Select" };
-
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
+   state = {
+      employees,
+      manageValue: "Select"
    }
 
+   // These bindings are necessary to make `this` work in the callback
+   // handleChange = this.handleChange.bind(this);
+   // handleSubmit = this.handleSubmit.bind(this)
 
-   handleSubmit(event) {
+   // using => removes the need to bind this to the callback
+   handleSubmit = (event) => {
       event.preventDefault();
    }
-   handleChange(event) {
+   handleChange = (event) => {
       this.setState({ manageValue: event.target.value });
    }
 
 
-   handlePageChange() {
+   handleTableValues() {
       if (this.state.manageValue === "Management") {
          return this.state.employees.filter(employee => employee.management === 1).map(employee =>
             <EmployeeComponent
@@ -83,7 +84,7 @@ class App extends Component {
                handleChange={this.handleChange}
             ></InputForms>
             <Table
-               handlePageChange={this.handlePageChange()}
+               handleTableValues={this.handleTableValues()}
             ></Table>
          </Wrapper>
       )
