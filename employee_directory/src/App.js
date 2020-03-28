@@ -6,7 +6,6 @@ import Table from "./pages/Table";
 import employees from "./employees.json";
 import InputForms from "./pages/InputForms";
 
-//change to stateful
 class App extends Component {
 
    constructor(props) {
