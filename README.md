@@ -4,7 +4,10 @@
 [text](https://link)
 
 ## Technologies Used
-git 
+React
+Heroku
+Git
+
 ## Features
 
 ## User Story
