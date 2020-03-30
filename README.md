@@ -1,6 +1,7 @@
 # Employee_Directory
 
-### Live [text](https://link)
+### Live Link 
+[text](https://link)
 
 ## Technologies Used
 git 
