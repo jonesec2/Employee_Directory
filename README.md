@@ -1,7 +1,7 @@
 # Employee_Directory
 
 ### Live Link 
-[text](https://link)
+[Employee Directory](https://employeedirectory3.herokuapp.com/)
 
 ## Technologies Used
 React
@@ -9,6 +9,8 @@ Heroku
 Git
 
 ## Features
+- Filter employees by different criteria.
+- Sort employees by all fields ascending and descending.
 
 ## User Story
 * As a user, 
